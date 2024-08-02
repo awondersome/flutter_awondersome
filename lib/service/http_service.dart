@@ -1,15 +1,15 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_awondersome/config/api.dart';
+import 'package:flutter_awondersome/static/api.dart';
 
-class HttpUtil {
-  static HttpUtil? _instance;
+class HttpService {
+  static HttpService? _instance;
 
-  factory HttpUtil() {
-    _instance ??= HttpUtil._internal();
+  factory HttpService() {
+    _instance ??= HttpService._internal();
     return _instance!;
   }
 
-  HttpUtil._internal() {
+  HttpService._internal() {
     Map<String, dynamic> headers = {
       'application-Name': 'jgcloud-app-dealer',
     };
@@ -33,7 +33,9 @@ class HttpUtil {
         "code": 401,
         "data": {
           "url":
-              "https://developer.huawei.com/allianceCmsResource/resource/HUAWEI_Developer_VUE/images/bannerpc12.jpg"
+              "https://developer.huawei.com/allianceCmsResource/resource/HUAWEI_Developer_VUE/images/bannerpc12.jpg",
+          "counter": 6,
+          "isNeed": true,
         }
       };
     }
