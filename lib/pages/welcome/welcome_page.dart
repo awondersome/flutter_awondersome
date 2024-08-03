@@ -6,14 +6,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:go_router/go_router.dart';
 
-class LandingPage extends StatefulWidget {
-  const LandingPage({super.key});
+class WelcomePage extends StatefulWidget {
+  const WelcomePage({super.key});
 
   @override
-  State<LandingPage> createState() => _LandingPageState();
+  State<WelcomePage> createState() => _WelcomePageState();
 }
 
-class _LandingPageState extends State<LandingPage> {
+class _WelcomePageState extends State<WelcomePage> {
   late Timer _timer;
   final LandingPageBloc _landingPageBloc = LandingPageBloc();
 
@@ -97,7 +97,7 @@ class _LandingPageState extends State<LandingPage> {
 
   void _skip() {
     if (mounted) {
-      context.go('/', extra: true);
+      context.go('/');
     }
   }
 }

@@ -27,4 +27,14 @@ extension DynamicExt on dynamic {
     if (this is String) return this;
     return '';
   }
+
+  List asList() {
+    if (this is List) return this;
+    return [];
+  }
+
+  Map<String, Object?> asMap() {
+    if (this is Map) return this;
+    return {};
+  }
 }
